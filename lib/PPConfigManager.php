@@ -66,6 +66,16 @@ class PPConfigManager {
 	}
 
 	/**
+	 * Simple setter for configuration params.
+	 * Necssary if account credentials are not fixed
+	 * and need to be configured by the user through
+	 * software's UI.
+	 */
+	public function set($searchKey, $value) {
+		$this->config[$searchKey] = $value;
+	}
+
+	/**
 	 * Utility method for handling account configuration
 	 * return config key corresponding to the API userId passed in
 	 *
